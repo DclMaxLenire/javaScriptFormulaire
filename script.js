@@ -1,9 +1,9 @@
+        // Verification de nom //
 function verificationCaracteresNom(event) {
 	 		
 	var keyCode = event.which ? event.which : event.keyCode;
 	var touche = String.fromCharCode(keyCode);
     var caracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
     var champNom = document.getElementById('nom');
 			
 	if(caracteres.indexOf(touche) >= 0) {
@@ -11,7 +11,7 @@ function verificationCaracteresNom(event) {
 	} 
 			
 }
-
+          // Verification de prenom //
 function verificationCaracteresPrenom(event) {
     var keyCode = event.which ? event.which : event.keyCode;
 	var touche = String.fromCharCode(keyCode);
@@ -22,24 +22,18 @@ if (caracteres.indexOf(touche)>= 0) {
     champPrenom.value += touche;
 }
 };
+        // Verification de la date de naissance //
+function verificationDateDeNaissance() {
 
-function verificationEmail() {
-    
-    var email = document.getElementById("email");
-    var testEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-   
-    
-    if (!testEmail.test(email.value)) {
-        document.getElementById("email").style.backgroundColor="red"
-        email.focus;
-    } else {
-        document.getElementById("email").style.backgroundColor="green"
-        email.focus;
-    }
+        var dateDeNaissance = parseFloat(document.forms["formulaire"].elements["dateDeNaissance"].value);
+        var dateDuJour = getDay();
+        console.log(dateDuJour);
+if(dateDeNaissance >= 2001) {
+    document.getElementById("dateDeNaissanceChamp").style.backgroundColor="red";
+} else {
+    document.getElementById("dateDeNaissanceChamp").style.backgroundColor="green";
 }
-
-
-
+}    
 
 
 
