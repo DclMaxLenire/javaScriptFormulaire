@@ -23,4 +23,23 @@ if (caracteres.indexOf(touche)>= 0) {
 }
 };
 
+function verificationEmail() {
+    
+    var email = document.getElementById("email");
+    var testEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+   
+    
+    if (!testEmail.test(email.value)) {
+        document.getElementById("email").style.backgroundColor="red"
+        email.focus;
+    } else {
+        document.getElementById("email").style.backgroundColor="green"
+        email.focus;
+    }
+}
+
+
+
+
+
 
