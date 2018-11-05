@@ -26,8 +26,6 @@ if (caracteres.indexOf(touche)>= 0) {
 function verificationDateDeNaissance() {
 
         var dateDeNaissance = parseFloat(document.forms["formulaire"].elements["dateDeNaissance"].value);
-        var dateDuJour = getDay();
-        console.log(dateDuJour);
 if(dateDeNaissance >= 2001) {
     document.getElementById("dateDeNaissanceChamp").style.backgroundColor="red";
 } else {
