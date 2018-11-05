@@ -42,6 +42,14 @@ if (testEmail.test(document.getElementById("email").value)) {
 }
 }
         // Limité le nombre de caractère d'un message //
-
-
-
+function compteurNombreCaracteres() {
+ var maxCaractere = 255;
+ var caracteresActuelle = document.forms["formulaire"].elements["votreMessage"].value.length;
+ var caracteresRestant = 255 - caracteresActuelle;
+ console.log(caracteresActuelle);
+ console.log(caracteresRestant);
+ document.getElementById("compteurDeCaractere").innerHTML="Nombre de caractères restant "+caracteresRestant+" /255";
+ if (caracteresActuelle >= maxCaractere) {
+     document.getElementById("votreMessage").style.backgroundColor="red";
+ }
+};

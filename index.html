@@ -24,6 +24,7 @@
             </div>
             <label for ="homme">Homme</label>
             <input type="radio" placeholder="homme" id="homme" name="homme" value="homme">
+            <br>
             <label for ="femme">Femme</label>
             <input type="radio" placeholder="femme" id="femme" name="femme" value="femme">
             <h2>Indiquez votre adresse email</h2>
@@ -31,9 +32,12 @@
             <input type="text" placeholder="email" id="email" name="email" onkeyup="verificationEmail()">
             </div>
             <h2>Votre Message</h2>
-            <input type="text" placeholder="votreMessage" id="votreMessage" name="votreMessage">
+            <textarea type="text" placeholder="votreMessage" id="votreMessage" name="votreMessage" maxlength="255" onkeyup="compteurNombreCaracteres()"></textarea>
+            <div id="compteurDeCaractere">
+            </div>
             <br>
             <button type="submit" name="Envoyer">Envoyer</button>
+
             
 
 
