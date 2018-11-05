@@ -50,6 +50,9 @@ function compteurNombreCaracteres() {
  console.log(caracteresRestant);
  document.getElementById("compteurDeCaractere").innerHTML="Nombre de caractères restant "+caracteresRestant+" /255";
  if (caracteresActuelle >= maxCaractere) {
-     document.getElementById("votreMessage").style.backgroundColor="red";
+    document.getElementById("votreMessage").style.backgroundColor="red";
+ } else {
+    document.getElementById("votreMessage").style.backgroundColor="white";
+
  }
 };
